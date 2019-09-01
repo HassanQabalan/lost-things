@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    tools:context=".Registration">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/error"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/red"
+        android:textStyle="bold"
+        android:freezesText="true"
+        android:gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/txt_first_name"
+
+        android:gravity="center"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textColorHint="#9B8D8C"
+
+        android:background="@drawable/btn2"
+        android:ems="10"
+
+
+        android:layout_marginBottom="10dp"
+        android:hint=" Your First Name"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/txt_last_name"
+        android:gravity="center"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textColorHint="#9B8D8C"
+        android:background="@drawable/btn2"
+        android:ems="10"
+
+        android:layout_marginBottom="10dp"
+        android:hint=" Your Last Name"
+        android:inputType="textPersonName"
+        />
+
+
+    <EditText
+        android:id="@+id/txt_pass"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="56dp"
+        android:gravity="center"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textColorHint="#9B8D8C"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:hint=" Your Password"
+        android:inputType="textPassword"
+        android:background="@drawable/btn2"
+        />
+
+
+    <EditText
+        android:id="@+id/txt_repass"
+        android:gravity="center"
+        android:layout_width="190dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textColorHint="#9B8D8C"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginBottom="10dp"
+        android:hint=" Your RePassword"
+        android:inputType="textPassword"
+        android:background="@drawable/btn2"
+        />
+    </LinearLayout>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_register"
+            android:layout_width="150dp"
+            android:layout_height="210dp"
+            android:layout_gravity="center"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/profile_image"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+
+        android:layout_margin="30dp">
+        <Spinner
+            android:id="@+id/txt_country"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textColorHint="#FFFFFF"
+            android:layout_weight="1"
+            android:entries="@array/country"
+            />
+        <Spinner
+            android:id="@+id/txt_area"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint=" Your Area"
+            android:textColor="@color/colorPrimary"
+            android:layout_weight="1"
+            android:entries="@array/area"
+            />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="30dp"
+        android:layout_marginTop="5dp">
+
+
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:orientation="horizontal"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            >
+
+            <RadioButton
+                android:id="@+id/rb_male"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/rb_female"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Female" />
+
+
+        </RadioGroup>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="108dp"
+        android:drawableLeft="@drawable/ic_date_range_black_24dp"
+        android:onClick="getDate"
+        android:text="Date Of Birth"
+        android:background="#f9e7ac"
+        android:textColor="#C719B0"
+        tools:ignore="OnClick" />
+
+
+
+
+
+
+    <Button
+        android:id="@+id/btn_next_to_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/f"
+        android:textSize="20dp"
+        android:text="Next"
+        android:textColor="#FFFFFF" />
+
+
+</LinearLayout>

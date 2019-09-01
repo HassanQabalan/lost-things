@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start"
+    android:background="@color/colorAccent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:background="@color/colorSecodary"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorSecodary"
+                app:titleTextColor="@color/colorPrimary"
+
+                android:id="@+id/toolbar"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                android:elevation="4dp"/>
+
+            <FrameLayout
+                android:id="@+id/fragment_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+
+
+            <!--<ImageView-->
+                <!--android:id="@+id/img_plus"-->
+                <!--android:onClick="plus"-->
+                <!--android:layout_width="100dp"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:src="@drawable/ic_add_black_24dp"-->
+
+                <!--tools:ignore="OnClick" />-->
+
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+            <!--&lt;!&ndash;android:text="filter"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content" />&ndash;&gt;-->
+            <!--<Button-->
+                <!--android:gravity="bottom"-->
+                <!--android:id="@+id/fillter"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginStart="55dp"-->
+                <!--android:background="@drawable/ic_filter"-->
+
+                <!--android:textColor="@color/colorAccent" />-->
+
+
+            <!--<Button-->
+                <!--android:id="@+id/chat1"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="Chat"/>-->
+
+            <!--<Button-->
+                <!--android:id="@+id/logout"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_weight="1"-->
+                <!--android:onClick="logout"-->
+                <!--android:text="logout" />-->
+
+
+        </LinearLayout>
+
+
+
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/refresh_post"
+            android:layout_width="wrap_content"
+
+
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+
+
+                android:id="@+id/recycle_post"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:ignore="InvalidId">
+
+            </android.support.v7.widget.RecyclerView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu"
+
+        />
+</android.support.v4.widget.DrawerLayout>
+
+
+
+
+
+
+
+
+
+    <!--<android.support.design.widget.AppBarLayout-->
+        <!--android:id="@+id/appBarLayout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content">-->
+
+        <!--<include-->
+        <!--android:id="@+id/main_page_toolbar"-->
+        <!--layout="@layout/app_bar_layout">-->
+    <!--</include>-->
+
+    <!--<android.support.design.widget.TabLayout-->
+        <!--android:id="@+id/main_tabs"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+    <!--</android.support.design.widget.TabLayout>-->
+
+<!--</android.support.design.widget.AppBarLayout>-->
+
+<!--<android.support.v4.view.ViewPager-->
+    <!--android:id="@+id/main_tabs_pager"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/appBarLayout">-->
+
+<!--</android.support.v4.view.ViewPager>-->
+
+<!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<android.support.v7.widget.Toolbar-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="?attr/actionBarSize"-->
+        <!--android:background="@color/colorPrimary"-->
+        <!--android:id="@+id/toolbar"-->
+        <!--android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"-->
+        <!--app:popupTheme="@style/ThemeOverlay.AppCompat.Light"-->
+        <!--android:elevation="4dp"/>-->
+
+    <!--<FrameLayout-->
+        <!--android:id="@+id/fragment_container"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"/>-->
+
+<!--</LinearLayout>-->
+
+<!--<android.support.design.widget.NavigationView-->
+    <!--android:id="@+id/nav_view"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_gravity="start"-->
+    <!--android:fitsSystemWindows="true"-->
+    <!--app:headerLayout="@layout/nav_header_main"-->
+    <!--app:menu="@menu/drawer_menu" />-->
+
+<!--</android.support.v4.widget.DrawerLayout>-->

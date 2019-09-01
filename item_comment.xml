@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/btn_style"
+    android:id="@+id/RelativeLayout_comment">
+
+
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="20dp"
+        android:id="@+id/iv_image"
+        app:civ_border_width="1dp"
+        app:civ_shadow="true"
+        app:civ_shadow_radius="10"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_toRightOf="@+id/iv_image"
+
+        android:text="name " />
+    <TextView
+        android:id="@+id/tv_chat_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_name"
+        android:layout_toRightOf="@+id/iv_image"
+        android:text="sthwrtyjw6yjwet7jetyjet77jed"
+        />
+    <TextView
+        android:id="@+id/edit_comment"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_chat_text"
+        android:layout_toRightOf="@+id/iv_image"
+        android:text="edit"
+        />
+    <EditText
+        android:id="@+id/new_update_comment"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_comment"
+        android:layout_toRightOf="@+id/iv_image"
+        android:hint="Edit"
+        android:visibility="gone"
+        />
+
+    <TextView
+        android:id="@+id/save_edit"
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/new_update_comment"
+        android:layout_toRightOf="@+id/iv_image"
+        android:text="save_edit"
+        android:visibility="gone"
+        />
+
+
+    <TextView
+        android:id="@+id/delete_comment"
+        android:layout_marginLeft="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_chat_text"
+        android:layout_toRightOf="@+id/save_edit"
+        android:text="delete"
+
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".comment">
+
+
+    <LinearLayout
+        android:background="@color/colorSecodary"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <Button
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="160dp"
+            android:background="@drawable/ic_refresh"
+            android:visibility="gone"
+            />
+
+
+        <!--<ScrollView-->
+        <!--android:id="@+id/scroll"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent">-->
+        <android.support.v4.widget.SwipeRefreshLayout
+
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/refresh_comment"
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp">
+            <android.support.v7.widget.RecyclerView
+                tools:itemCount="100"
+                android:id="@+id/recylcerView_chats"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="60dp"
+
+
+                />
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <!--</ScrollView>-->
+
+
+
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/txt_sent_chat"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
+            android:hint="Write Comment...."
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp" />
+
+        <ImageButton
+            android:id="@+id/btn_send_chat"
+            style="@android:style/Widget.ImageButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_send" />
+    </LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

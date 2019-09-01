@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".PostData">
+
+
+    <LinearLayout
+        android:layout_margin="5dp"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ImageView
+            android:id="@+id/imge_chose"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_photo_camera_black_24dp"
+            />
+
+
+
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location"
+                android:textColor="@android:color/background_light"
+                android:background="@drawable/buttons"
+                />
+
+            <EditText
+                android:layout_marginLeft="5dp"
+                android:id="@+id/spacific_area"
+                android:hint="Spacific Area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RadioGroup
+                        android:id="@+id/RG_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Chose one of type to Publish :"
+                            android:textStyle="bold"
+                            android:textColor="@color/black"/>
+
+                        <RadioButton
+                            android:id="@+id/r_money"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="money"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            />
+
+                        <RadioButton
+                            android:id="@+id/r_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="mobile"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/r_other"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="other"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/r_document"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="document"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/r_wallet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="wallet"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/r_jewellery"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="jewellery"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+                    </RadioGroup>
+
+                    <RadioGroup
+                        android:id="@+id/RG_type_loster_OR_founder"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Are you : "
+                            android:textColor="@color/black"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/r_loster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="loster"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"/>
+
+                        <RadioButton
+                            android:id="@+id/r_founder"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/blue"
+                            android:textStyle="bold"
+                            android:text="founder"
+                            />
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <Spinner
+                            android:id="@+id/area_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/area_name_location"
+                            tools:ignore="DuplicateIds">
+
+                        </Spinner>
+
+                        <Spinner
+                            android:visibility="gone"
+                            android:id="@+id/color"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:entries="@array/color"
+                            tools:ignore="DuplicateIds">
+
+                        </Spinner>
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/txt_type"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="TYPE"
+                        android:visibility="gone"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/btn2"/>
+                    <EditText
+                        android:id="@+id/txt_amount_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="AMOUNT OF MONEY "
+                        android:visibility="gone"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/btn2"/>
+
+                    <EditText
+                        android:id="@+id/txt_card_id"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="CARD ID "
+                        android:visibility="gone"
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/btn2"/>
+
+                    <EditText
+                        android:id="@+id/txt_reward"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="REWARD  "
+                        android:paddingLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/btn2"/>
+                    <EditText
+                        android:id="@+id/txt_spacification"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:hint="Other Spacification.....  "
+                        android:paddingLeft="20dp"
+                        android:background="@drawable/btn2"
+                        android:layout_marginTop="5dp"/>
+
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_publish"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/colorPrimary"
+                    android:textSize="20dp"
+                    android:textColor="#FDFFFC"
+                    android:text="publish post"
+                    android:layout_marginTop="20dp"/>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
+

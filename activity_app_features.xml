@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/features"
+    tools:context=".AppFeatures">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="o The application aims to deliver lost things to their owners.\n\n
+o The application is a way to contact between the loser and founder to recover the lost thing.\n\n
+o The application contains a login system in several ways (phone number, Facebook, google).\n\n
+o Also the application provides the possibility of publication post about losts or founds.\n\n
+o In addition the application provides the ability to locate the loss or found area.\n\n
+o Finally, The application Offers a possibility to conduct a private chat between the loser and founder to facilitate the delivery of the lost thing."
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:textColor="#99FFFFFF"
+        android:textStyle="italic"
+        android:textSize="16dp"
+        android:layout_margin="20dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <Button
+            android:id="@+id/btn_next_to_splash"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="36dp"
+            android:width="20dp"
+            android:height="20dp"
+
+            android:background="#ff9523"
+            android:text="Next"
+            android:textColor="#07314c"
+            android:textSize="20dp" />
+
+
+        <Button
+            android:id="@+id/btn_back_to"
+            android:width="20dp"
+            android:height="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+android:layout_marginLeft="180dp"            android:layout_marginTop="36dp"
+            android:background="#ff9523"
+            android:textSize="20dp"
+            android:text="Back"
+            android:textColor="#07314c" />
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
