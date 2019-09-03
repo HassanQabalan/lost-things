@@ -1,4 +1,4 @@
-package com.mohammadhajali.mychat22;
+package com.hassanqabalan;
 
 import android.content.Context;
 import android.content.Intent;
